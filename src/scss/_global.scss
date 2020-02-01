@@ -1,0 +1,83 @@
+// ==== GOOGLE FONT ==== //
+
+// ==== COLOURS VARIABLES ==== //
+
+// ==== GLOBAL STYLES ==== //
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "sans-serif";
+}
+
+p,
+a,
+body,
+span {
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.main-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
