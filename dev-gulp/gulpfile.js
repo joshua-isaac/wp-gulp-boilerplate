@@ -1,5 +1,5 @@
 // theme name
-const themeName = "wordpress";
+const wp_install_name = "wordpress";
 
 // proxy path
 const proxyPath = "localhost:8888";
@@ -8,7 +8,6 @@ const proxyPath = "localhost:8888";
 const gulp = require("gulp"),
   browserSync = require("browser-sync"),
   autoprefixer = require("gulp-autoprefixer"),
-  concat = require("gulp-concat"),
   sass = require("gulp-sass"),
   sourcemaps = require("gulp-sourcemaps"),
   uglify = require("gulp-uglify");
@@ -41,11 +40,10 @@ function css() {
     .pipe(gulp.dest(cssDist));
 }
 
-// javascript function that processes our jsSRC array, concatenates and minifies
+// javascript function that minifies js
 function javascript() {
   return gulp
     .src(js + "/scripts.js")
-    .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest(jsDist));
 }
@@ -54,13 +52,13 @@ function javascript() {
 function watch() {
   browserSync.init({
     open: "external",
-    proxy: `${proxyPath}/${themeName}`,
+    proxy: `${proxyPath}/${wp_install_name}`,
     port: 8888
   });
   gulp.watch(styleWatchFiles, gulp.series([css]));
   gulp.watch(js, javascript);
   gulp
-    .watch([phpWatchFiles, jsDist + "/main.min.js", cssDist + "/styles.css"])
+    .watch([phpWatchFiles, jsDist + "/scripts.js", cssDist + "/styles.css"])
     .on("change", browserSync.reload);
 }
 
