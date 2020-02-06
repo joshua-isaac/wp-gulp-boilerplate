@@ -7,7 +7,7 @@ This is a WordPress Theme boilerplate using Gulp v4 to help automate workflow. T
 - Clean Folder Structure
 - Hot Reloading (on scss, js, or php change);
 
-###Configure
+### Configure
 1. run npm install
 2. cd into dev-gulp and configure wp_theme_name & proxyPath in gulpfile.js
 3. run gulp
