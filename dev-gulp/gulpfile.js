@@ -1,8 +1,5 @@
-// theme name
-const wp_install_name = "wordpress";
-
 // proxy path
-const proxyPath = "localhost:8888";
+const proxyPath = "http://localhost:10000/";
 
 // import gulp + plugins
 const gulp = require("gulp"),
@@ -52,8 +49,7 @@ function javascript() {
 function watch() {
   browserSync.init({
     open: "external",
-    proxy: `${proxyPath}/${wp_install_name}`,
-    port: 8888
+    proxy: `${proxyPath}`,
   });
   gulp.watch(styleWatchFiles, gulp.series([css]));
   gulp.watch(js, javascript);
